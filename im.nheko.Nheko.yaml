@@ -147,15 +147,24 @@ modules:
       - sha256: 31029fffa4873e2769c555668e8edaa6bd5721edbc445bff5e66cc6af3b9ed78
         type: archive
         url: https://github.com/KDAB/KDSingleApplication/releases/download/v1.1.0/kdsingleapplication-1.1.0.tar.gz
-  - name: re2
-    buildsystem: simple
-    build-commands:
-      - make static
-      - make prefix=/app static-install
+  - name: abseil-cpp
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DBUILD_SHARED_LIBS=OFF
+    buildsystem: cmake-ninja
     sources:
-      - sha256: f89c61410a072e5cbcf8c27e3a778da7d6fd2f2b5b1445cd4f4508bee946ab0f
+      - sha256: f50e5ac311a81382da7fa75b97310e4b9006474f9560ac46f54a9967f07d4ae3
         type: archive
-        url: https://github.com/google/re2/archive/refs/tags/2022-06-01.tar.gz
+        url: https://github.com/abseil/abseil-cpp/releases/download/20240722.0/abseil-cpp-20240722.0.tar.gz
+  - name: re2
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DBUILD_SHARED_LIBS=OFF
+    buildsystem: cmake-ninja
+    sources:
+      - sha256: eb2df807c781601c14a260a507a5bb4509be1ee626024cb45acbd57cb9d4032b
+        type: archive
+        url: https://github.com/google/re2/archive/refs/tags/2024-07-02.tar.gz
   - name: gstreamer
     buildsystem: meson
     sources:
