@@ -214,8 +214,9 @@ modules:
     sources:
       - type: git
         url: https://github.com/Nheko-Reborn/nheko.git
-        tag: v0.12.1
-        commit: dc910109ad1e8704f61f6cd923cbe8272b6c7fef
+        # tag: v0.12.1
+        # the latest commit
+        commit: 89e06f32ddb58e1c6385a54f4ae4fba1d1247026
 
       - type: archive
         url: https://github.com/hoytech/lmdbxx/archive/1.0.0.tar.gz
