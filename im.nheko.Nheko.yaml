@@ -86,7 +86,7 @@ modules:
       - -DSPDLOG_BUILD_BENCH=OFF
       - -DSPDLOG_BUILD_TESTING=OFF
       - -DSPDLOG_BUILD_EXAMPLE=OFF
-      - -DSPDLOG_FMT_EXTERNAL=ON
+      - -DSPDLOG_FMT_EXTERNAL=OFF
     sources:
       - type: archive
         sha256: 1586508029a7d0670dfcb2d97575dcdc242d3868a259742b69f100801ab4e16b
